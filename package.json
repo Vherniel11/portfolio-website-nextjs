@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/manrope": "^4.5.11",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "reseter.css": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "8.22.0",
