@@ -112,7 +112,7 @@ const HeroSection = () => {
 };
 
 var Hero = styled.section`
-    min-height: 80vh;
+    min-height: 85vh;
     max-height: 100%;
     padding-top: 6rem;
 

@@ -4,9 +4,9 @@ import Container from '../../shared/container/Container.styled';
 import MenuInfo from './MenuInfo';
 import MenuNav from './MenuNav';
 
-const Menu = ({ toggle }) => {
+const Menu = ({ toggle, isMenuOpen }) => {
     return (
-        <MenuSection>
+        <MenuSection isMenuOpen={isMenuOpen}>
             <Container>
                 <MenuNav toggle={toggle} />
                 <MenuInfo />
@@ -16,6 +16,9 @@ const Menu = ({ toggle }) => {
 };
 
 var MenuSection = styled.div`
+    ${(prop) => (prop.isMenuOpen ? '' : 'top: -9999px')};
+    width: 100%;
+    position: absolute;
     padding-bottom: 2rem;
     background-color: white;
     box-shadow: 0px 1.3px 1.3px -6px rgba(0, 0, 0, 0.06),

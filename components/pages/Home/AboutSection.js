@@ -67,7 +67,7 @@ const AboutSection = () => {
 };
 
 var About = styled.section`
-    padding-top: 12em;
+    padding-top: 8em;
     padding-bottom: 2em;
 `;
 

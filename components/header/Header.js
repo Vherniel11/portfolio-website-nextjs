@@ -7,7 +7,6 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = (e) => {
-        e.preventDefault();
         setMenuOpen(!menuOpen);
     };
 
@@ -20,7 +19,7 @@ const Header = () => {
     useEffect(() => {
         const header = document.querySelector('header');
         function checkScroll() {
-            window.scrollY > 100
+            window.scrollY >= 100
                 ? (header.style.backgroundColor = 'white')
                 : (header.style.backgroundColor = 'transparent');
         }
@@ -31,14 +30,15 @@ const Header = () => {
     }, [allowDOM]);
 
     return (
-        <Head>
+        <Head isMenuOpen={menuOpen}>
             <HeaderNavBar toggle={toggleMenu} isMenuOpen={menuOpen} />
-            {menuOpen ? <Menu toggle={toggleMenu} /> : <></>}
+            <Menu toggle={toggleMenu} isMenuOpen={menuOpen} />
         </Head>
     );
 };
 
 var Head = styled.header`
+    ${(prop) => (!prop.isMenuOpen ? '' : 'background-color: white !important')};
     position: fixed;
     width: 100%;
     top: 0;
