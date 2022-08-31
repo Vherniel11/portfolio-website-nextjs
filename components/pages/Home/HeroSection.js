@@ -9,6 +9,7 @@ import { IoLogoSass } from 'react-icons/io5';
 import { SiSvelte } from 'react-icons/si';
 import { SiTypescript } from 'react-icons/si';
 import { SiTailwindcss } from 'react-icons/si';
+import { SiPostcss } from 'react-icons/si';
 
 const HeroSection = () => {
     return (
@@ -20,7 +21,7 @@ const HeroSection = () => {
                     JavaScript technologies.
                 </Headline>
                 <div>
-                    <p>Web technologies I use</p>
+                    <p>Technologies I use</p>
                     <IconsFlex>
                         <IconContext.Provider
                             value={{
@@ -74,6 +75,15 @@ const HeroSection = () => {
                             }}>
                             <Icon>
                                 <IoLogoSass />
+                            </Icon>
+                        </IconContext.Provider>
+                        <IconContext.Provider
+                            value={{
+                                color: '#D23709',
+                                size: '1.5em',
+                            }}>
+                            <Icon>
+                                <SiPostcss />
                             </Icon>
                         </IconContext.Provider>
                     </IconsFlex>
