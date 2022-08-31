@@ -6,7 +6,7 @@ import HeaderMenuBtn from './HeaderMenuBtn';
 
 const HeaderNavBar = ({ toggle, isMenuOpen }) => {
     return (
-        <Container>
+        <Wrapper>
             <Flex>
                 <Flex1>
                     <HeaderLogo />
@@ -14,15 +14,18 @@ const HeaderNavBar = ({ toggle, isMenuOpen }) => {
                 <HeaderContactBtn />
                 <HeaderMenuBtn toggle={toggle} isMenuOpen={isMenuOpen} />
             </Flex>
-        </Container>
+        </Wrapper>
     );
 };
+
+var Wrapper = styled(Container)`
+    background-color: white;
+`;
 
 var Flex = styled.div`
     padding: 1.5rem 0;
     display: flex;
     flex-flow: row wrap;
-    background-color: white;
 `;
 
 var Flex1 = styled.div`
