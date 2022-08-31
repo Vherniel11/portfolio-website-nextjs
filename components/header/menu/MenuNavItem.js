@@ -1,18 +1,20 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
-const MenuNavItem = () => {
+const MenuNavItem = ({ toggle }) => {
     return (
         <Ul>
-            <Li>
+            {/* <Li>
                 <Link href="/">Work</Link>
-            </Li>
+            </Li> */}
             <Li>
-                <Link href="/">About</Link>
+                <Link href="#about">
+                    <a onClick={toggle}>About</a>
+                </Link>
             </Li>
-            <Li>
+            {/* <Li>
                 <Link href="/">Services</Link>
-            </Li>
+            </Li> */}
         </Ul>
     );
 };

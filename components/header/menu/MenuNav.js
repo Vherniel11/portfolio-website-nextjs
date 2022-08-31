@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import MenuNavItem from './MenuNavItem';
 
-const MenuNav = () => {
+const MenuNav = ({ toggle }) => {
     return (
         <Nav>
-            <MenuNavItem />
+            <MenuNavItem toggle={toggle} />
         </Nav>
     );
 };

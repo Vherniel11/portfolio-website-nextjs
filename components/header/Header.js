@@ -14,7 +14,7 @@ const Header = () => {
     return (
         <Head>
             <HeaderNavBar toggle={toggleMenu} />
-            {menuOpen ? <Menu /> : <></>}
+            {menuOpen ? <Menu toggle={toggleMenu} /> : <></>}
         </Head>
     );
 };

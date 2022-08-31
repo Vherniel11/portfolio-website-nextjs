@@ -4,11 +4,11 @@ import Container from '../../shared/container/Container.styled';
 import MenuInfo from './MenuInfo';
 import MenuNav from './MenuNav';
 
-const Menu = () => {
+const Menu = ({ toggle }) => {
     return (
         <Container>
             <Indent>
-                <MenuNav />
+                <MenuNav toggle={toggle} />
                 <MenuInfo />
             </Indent>
         </Container>

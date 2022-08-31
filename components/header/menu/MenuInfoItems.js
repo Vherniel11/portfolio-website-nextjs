@@ -29,6 +29,10 @@ const MenuInfoItem = () => {
 var Address = styled.address`
     font-style: normal;
     margin-top: 1.5rem;
+
+    p {
+        margin: 0;
+    }
 `;
 
 var ItemWrapper = styled.div`

@@ -16,11 +16,6 @@ const HeaderMenuBtn = ({ toggle }) => {
     );
 };
 
-function handleClick(e) {
-    e.preventDefault();
-    console.log('Clicked');
-}
-
 var Button = styled.button`
     width: 2rem;
     height: 2rem;
