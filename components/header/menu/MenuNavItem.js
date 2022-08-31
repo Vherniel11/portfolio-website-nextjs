@@ -8,7 +8,7 @@ const MenuNavItem = ({ toggle }) => {
                 <Link href="/">Work</Link>
             </Li> */}
             <Li>
-                <Link href="#about">
+                <Link href="/#about">
                     <a onClick={toggle}>About</a>
                 </Link>
             </Li>

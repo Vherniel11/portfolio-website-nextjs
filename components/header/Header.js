@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Menu from './menu/Menu';
 import HeaderNavBar from './navbar/HeaderNavBar';
@@ -11,19 +11,24 @@ const Header = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const onScroll = useCallback((e) => {
-        const { pageYOffset, scrollY } = window;
-        console.log('yOffset', pageYOffset, 'scrollY', scrollY);
-        setScrollY(window.pageYOffset);
+    const [allowDOM, setAllowDOM] = useState(false);
+
+    useEffect(() => {
+        setAllowDOM(true);
     }, []);
 
     useEffect(() => {
-        window.addEventListener('scroll', onScroll, { passive: true });
-
-        return window.removeEventListener('scroll', onScroll, {
-            passive: true,
-        });
-    }, []);
+        const header = document.querySelector('header');
+        function checkScroll() {
+            window.scrollY > 100
+                ? (header.style.backgroundColor = 'white')
+                : (header.style.backgroundColor = 'transparent');
+        }
+        if (allowDOM) {
+            window.addEventListener('scroll', checkScroll);
+            return () => window.removeEventListener('resize', checkScroll);
+        }
+    }, [allowDOM]);
 
     return (
         <Head>

@@ -6,7 +6,7 @@ import Divider from '../../shared/divider/Divider.styled';
 
 const AboutSection = () => {
     return (
-        <About>
+        <About id="about">
             <Container>
                 <Flex>
                     <SideContent>
