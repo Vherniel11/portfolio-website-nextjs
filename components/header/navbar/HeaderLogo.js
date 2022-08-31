@@ -18,6 +18,10 @@ var Logo = styled.svg`
     path {
         color: black;
     }
+
+    @media (min-width: 48rem) {
+        height: 3rem;
+    }
 `;
 
 export default HeaderLogo;
