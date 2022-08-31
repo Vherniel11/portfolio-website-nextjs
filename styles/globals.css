@@ -14,6 +14,15 @@ body {
     line-height: var(--font-line-height);
 }
 
+body {
+    background-image: url('/Vector.png'), url('/Vector.png');
+    background-repeat: no-repeat;
+    background-size: 300%, 250%;
+    background-position: 50% 0, 50% 105%;
+}
+
+
+
 h1,
 h2,
 h3,
@@ -28,8 +37,30 @@ p {
     margin-bottom: 1rem;
 }
 
+@media (min-width: 20rem) {
+    body {
+        background-position: 50% 0, 50% 110%;
+    }
+}
+@media (min-width: 30rem) {
+    body {
+        background-size: 200%, 200%;
+        background-position: 50% -3rem, 50% 125%;
+    }
+}
+
 @media (min-width: 48rem) {
     body {
+        background-size: 150%, 150%;
+        background-position: 50% 1rem, 50% 120%;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 64rem) {
+    body {
+        background-size: 150%, 150%;
+        background-position: 50% -5rem, 50% 150%;
         font-size: 20px;
     }
 }
@@ -37,5 +68,7 @@ p {
 @media (min-width: 80rem) {
     body {
         font-size: 24px;
+        background-size: 120%, 120%;
+        background-position: 50% -8rem, 50% 130%;
     }
 }

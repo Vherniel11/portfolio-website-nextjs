@@ -23,7 +23,7 @@ const HeroSection = () => {
                 </Headline>
                 <Technologies>
                     <div>
-                        <p>Technologies I use</p>
+                        <Title>Technologies I use:</Title>
                         <IconsFlex>
                             <IconContext.Provider
                                 value={{
@@ -94,17 +94,26 @@ const HeroSection = () => {
                     </div>
                 </Technologies>
             </Container>
-            <MaxFlex>
-                <div />
-                <MaxFlexRight>
-                    <ImageContainer>{/* <Image src={} /> */}</ImageContainer>
-                </MaxFlexRight>
-            </MaxFlex>
+            {/* <MaxFlex> */}
+            {/* <div /> */}
+            {/* <MaxFlexRight>
+                    <ImageContainer>
+                        <Image
+                            src="/vherniel-lebis.png"
+                            width="2560"
+                            height="1080"
+                            objectFit="cover"
+                        />
+                    </ImageContainer>
+                </MaxFlexRight> */}
+            {/* </MaxFlex> */}
         </Hero>
     );
 };
 
 var Hero = styled.section`
+    min-height: 80vh;
+    max-height: 100%;
     padding-top: 6rem;
 
     @media (min-width: 80rem) {
@@ -145,11 +154,20 @@ var MaxFlexRight = styled.div`
 
 var ImageContainer = styled.div`
     padding-top: calc(9 / 16 * 100%);
+    position: relative;
     height: 0;
     background-color: lightgray;
 
     @media (min-width: 48rem) {
         padding-top: calc(9 / 21 * 100%);
+    }
+
+    & > span {
+        position: absolute !important;
+        width: 100% !important;
+        height: 100% !important;
+        top: 0;
+        left: 0;
     }
 `;
 
@@ -163,6 +181,7 @@ var Headline = styled.h1`
     @media (min-width: 80rem) {
         font-size: 3rem;
         margin-top: 3rem;
+        padding-bottom: 2rem;
     }
 `;
 
@@ -171,8 +190,12 @@ var Technologies = styled.div`
     max-width: 85%;
 
     @media (min-width: 80rem) {
-        margin-top: 10rem;
+        margin-top: 5rem;
     }
+`;
+
+var Title = styled.p`
+    font-weight: 700;
 `;
 
 var IconsFlex = styled.div`

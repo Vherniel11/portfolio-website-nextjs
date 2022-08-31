@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 import Menu from './menu/Menu';
 import HeaderNavBar from './navbar/HeaderNavBar';
@@ -10,6 +10,20 @@ const Header = () => {
         e.preventDefault();
         setMenuOpen(!menuOpen);
     };
+
+    const onScroll = useCallback((e) => {
+        const { pageYOffset, scrollY } = window;
+        console.log('yOffset', pageYOffset, 'scrollY', scrollY);
+        setScrollY(window.pageYOffset);
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        return window.removeEventListener('scroll', onScroll, {
+            passive: true,
+        });
+    }, []);
 
     return (
         <Head>
