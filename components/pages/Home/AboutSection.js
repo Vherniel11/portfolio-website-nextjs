@@ -67,7 +67,7 @@ const AboutSection = () => {
 };
 
 var About = styled.section`
-    padding-top: 6em;
+    padding-top: 12em;
     padding-bottom: 2em;
 `;
 
@@ -113,7 +113,10 @@ var MainContent = styled.div`
 `;
 
 var FlexSide = styled.div`
+    padding-right: 1rem;
+
     h4 {
+        margin-top: 0.35em;
         font-size: 1rem;
     }
 
@@ -121,7 +124,7 @@ var FlexSide = styled.div`
         flex-basis: calc(2 / 7 * 100%);
     }
     @media (min-width: 80rem) {
-        h4 {CLS
+        h4 {
             font-size: 1.25rem;
         }
     }

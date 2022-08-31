@@ -35,7 +35,7 @@ const Footer = () => {
 };
 
 var Foot = styled.footer`
-    margin-top: 4em;
+    padding-top: 8em;
     padding-bottom: 2em;
 `;
 

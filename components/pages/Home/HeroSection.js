@@ -137,8 +137,8 @@ var MaxFlexRight = styled.div`
         padding-left: 4rem;
     }
     @media (min-width: 80rem) {
-        flex-basis: 60%;
-        padding-left: 6rem;
+        flex-basis: 50%;
+        padding-left: 0;
         margin-top: -10rem;
     }
 `;
