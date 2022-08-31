@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
         <Head>
-            <HeaderNavBar toggle={toggleMenu} />
+            <HeaderNavBar toggle={toggleMenu} isMenuOpen={menuOpen} />
             {menuOpen ? <Menu toggle={toggleMenu} /> : <></>}
         </Head>
     );

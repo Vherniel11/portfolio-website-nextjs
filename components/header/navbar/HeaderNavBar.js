@@ -4,7 +4,7 @@ import HeaderContactBtn from './HeaderContactBtn';
 import HeaderLogo from './HeaderLogo';
 import HeaderMenuBtn from './HeaderMenuBtn';
 
-const HeaderNavBar = ({ toggle }) => {
+const HeaderNavBar = ({ toggle, isMenuOpen }) => {
     return (
         <Container>
             <Flex>
@@ -12,7 +12,7 @@ const HeaderNavBar = ({ toggle }) => {
                     <HeaderLogo />
                 </Flex1>
                 <HeaderContactBtn />
-                <HeaderMenuBtn toggle={toggle} />
+                <HeaderMenuBtn toggle={toggle} isMenuOpen={isMenuOpen} />
             </Flex>
         </Container>
     );
