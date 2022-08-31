@@ -67,7 +67,7 @@ const AboutSection = () => {
 };
 
 var About = styled.section`
-    padding-top: 4em;
+    padding-top: 6em;
     padding-bottom: 2em;
 `;
 
@@ -100,7 +100,7 @@ var MainContent = styled.div`
 
     h3 {
         line-height: 1.3;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
 
         @media (min-width: 48rem) {
             font-size: 2rem;
@@ -121,7 +121,7 @@ var FlexSide = styled.div`
         flex-basis: calc(2 / 7 * 100%);
     }
     @media (min-width: 80rem) {
-        h4 {
+        h4 {CLS
             font-size: 1.25rem;
         }
     }
