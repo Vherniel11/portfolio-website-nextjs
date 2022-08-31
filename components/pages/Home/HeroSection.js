@@ -1,6 +1,8 @@
 import Container from '../../shared/container/Container.styled';
 import styled from 'styled-components';
 import Image from 'next/image';
+import Button from '../../shared/button/Button';
+import Link from 'next/link';
 
 // React Icons
 import { IconContext } from 'react-icons';
@@ -21,6 +23,16 @@ const HeroSection = () => {
                     deliver dynamic, user-friendly, and effective websites with
                     JavaScript technologies.
                 </Headline>
+                <BtnWrapper>
+                    <Button>
+                        <Link href="tel:+639669909400">Call me</Link>
+                    </Button>
+                    <Button>
+                        <Link href="mailto:hello@vherniellebis.tech">
+                            Send an email
+                        </Link>
+                    </Button>
+                </BtnWrapper>
                 <Technologies>
                     <div>
                         <Title>Technologies I use:</Title>
@@ -112,8 +124,8 @@ const HeroSection = () => {
 };
 
 var Hero = styled.section`
-    min-height: 85vh;
-    max-height: 100%;
+    // min-height: 85vh;
+    // max-height: 100%;
     padding-top: 6rem;
 
     @media (min-width: 80rem) {
@@ -180,7 +192,7 @@ var Headline = styled.h1`
     }
     @media (min-width: 80rem) {
         font-size: 3rem;
-        margin-top: 3rem;
+        margin-top: 5rem;
         padding-bottom: 2rem;
     }
 `;
@@ -205,6 +217,36 @@ var IconsFlex = styled.div`
 
 var Icon = styled.div`
     margin-right: 1em;
+`;
+
+var BtnWrapper = styled.div`
+    display: flex;
+    margin-top: 2em;
+
+    ${Button} {
+        margin-right: 1em;
+    }
+
+    ${Button}:nth-child(2) a {
+        background-color: transparent;
+        color: black;
+        border: solid 1px black;
+    }
+
+    ${Button} a {
+        font-size: 0.75em;
+        padding: 0.875em 1.5em;
+    }
+
+    @media (min-width: ) {
+        ${Button} {
+            margin-right: 1.5em;
+        }
+        ${Button} a {
+            font-size: 0.875em;
+            padding: 0.875em 2em;
+        }
+    }
 `;
 
 export default HeroSection;

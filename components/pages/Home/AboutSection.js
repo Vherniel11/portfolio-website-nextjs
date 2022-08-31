@@ -67,8 +67,12 @@ const AboutSection = () => {
 };
 
 var About = styled.section`
-    padding-top: 8em;
+    padding-top: 5em;
     padding-bottom: 2em;
+
+    @media (min-width: 80rem) {
+        padding-top: 24rem;
+    }
 `;
 
 var Flex = styled.div`
